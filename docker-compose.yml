@@ -1,0 +1,19 @@
+---
+version: '3'
+
+services:
+  audacity:
+    build: .
+    image: neofob/audacity:latest
+    container_name: audacity
+    devices:
+      - "/dev/snd:/dev/snd"
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ${HOME}:${HOME}
+    environment:
+      - HOME=${HOME}
+      - DISPLAY=${DISPLAY}
+    working_dir: ${HOME}
+#    network_mode: host
+# Uncomment the above line if you want to run the container in network host mode
