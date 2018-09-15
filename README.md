@@ -1,6 +1,6 @@
-`audacity` in `docker-compose` setup
+`Audacity` in `docker-compose` setup
 ====================================
-*Running the latest audacity in docker*
+*Running the latest `Audacity` in docker container*
 
 ```
 docker build -t neofob/audacity:latest .
@@ -19,7 +19,7 @@ Run with `docker-compose` for less typing.
 xhost +
 docker-compose up -d
 ```
-Alternatively, we can run the `audacity` container in `network_mode:host`
+Alternatively, we can run the `Audacity` container in `network_mode:host`
 
 **Note:** The `1st` user `id` and its group `id` in `Ubuntu/Debian` is `1000`.
 You can nerd out to replace `-u 1000:1000` with `-u $(id -g):$(id -u)`.
